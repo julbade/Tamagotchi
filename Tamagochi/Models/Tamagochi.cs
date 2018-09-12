@@ -50,5 +50,24 @@ namespace Tamagochi
       _play = newpetPlay;
     }
 
+    public int GetId()
+    {
+      return _id;
+    }
+
+    public static List<Pet> GetPet()
+    {
+      return _instances;
+    }
+
+    public static void ClearPet()
+    {
+      _instances.Clear();
+    }
+
+    public static Pet Find(in searchId)
+    {
+      return _instances[searchId-1];
+    }
    }
   }
